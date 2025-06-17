@@ -1,0 +1,54 @@
+/* starability-slot.css */
+.starability-slot {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+.starability-slot > input {
+  display: none;
+}
+
+.starability-slot > label {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-family: Times;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.starability-slot > label::before {
+  content: "★";
+  position: absolute;
+}
+
+.starability-slot > label:hover,
+.starability-slot > label:hover ~ label,
+.starability-slot > input:focus ~ label {
+  color: #fd4;
+}
+
+.starability-slot > input:checked ~ label {
+  color: #fd4;
+}
+
+.starability-slot > input:focus + label::before {
+  outline: 1px solid #999;
+}
+
+  .starability-result {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+  .star-rating {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: #ccc;
+}
+
+.star-rating .star.filled {
+  color: #FFD700;
+}
